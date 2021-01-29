@@ -1,11 +1,9 @@
 package Calc;
 import java.util.Scanner;
 
-//Variables, data types, operators, type casting, control statements, 
-// class, objects, access specifiers, and core keywords like final, this, and static
-
 public class Calculator 
 {
+	//This method carries out the calculation
 	public static void calculate(String operation, double num1, double num2)
 	{
 		if(operation.equals("addition"))
@@ -29,6 +27,7 @@ public class Calculator
 	    	System.out.println("Error! Could not compute");
 	    }
 	}
+	//This method verifies that the string is a valid operation
 	public static void checkOperator(String operation)
 	{
 		if(!operation.equals("addition"))
@@ -52,6 +51,7 @@ public class Calculator
 	    }
 	}
 
+	//This is the main method where the program runs
 	public static void main(String[] args) 
 	{
 		@SuppressWarnings("resource")
@@ -60,6 +60,7 @@ public class Calculator
 		System.out.println("What operation will you be using: ");
 	    System.out.println("addition, subtraction, multiplication, division?");
 	    String operation = myScan.next();
+	    
 	    checkOperator(operation);
 	    
 	    System.out.println("Enter first number");
