@@ -28,7 +28,7 @@ public class Calculator
 	    }
 	}
 	//This method verifies that the string is a valid operation
-	public static void checkOperator(String operation)
+	public static String checkOperator(String operation)
 	{
 		if(!operation.equals("addition"))
 	    {
@@ -44,11 +44,12 @@ public class Calculator
 	    				System.out.println("What operation will you be using: ");
 	    			    System.out.println("addition, subtraction, multiplication, division?");
 	    			    operation = myScan.next();
-	    			    checkOperator(operation);
+	    			    operation = checkOperator(operation);
 	    		    }
 	    	    }
 		    }
 	    }
+		return operation;
 	}
 
 	//This is the main method where the program runs
@@ -61,7 +62,7 @@ public class Calculator
 	    System.out.println("addition, subtraction, multiplication, division?");
 	    String operation = myScan.next();
 	    
-	    checkOperator(operation);
+	    operation = checkOperator(operation);
 	    
 	    System.out.println("Enter first number");
 	    double num1 = myScan.nextDouble();
